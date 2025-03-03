@@ -4,11 +4,14 @@ import pickle
 import pandas as pd
 import uvicorn
 import requests
+import os
 
 app = FastAPI(title="Car Price Prediction API",
               description="Predict car price based on input features")
 
-model_path = r"/models/best_model.pkl"
+model_path = os.path.join(os.getcwd(), "best_model.pkl")
+print(f"Looking for model at: {model_path}")
+
 try:
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
