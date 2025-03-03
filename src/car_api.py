@@ -9,7 +9,7 @@ import os
 app = FastAPI(title="Car Price Prediction API",
               description="Predict car price based on input features")
 
-model_path = os.path.join(os.getcwd(), "best_model.pkl")
+model_path = "src/best_model.pkl"
 print(f"Looking for model at: {model_path}")
 
 try:
