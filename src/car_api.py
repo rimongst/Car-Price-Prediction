@@ -5,6 +5,7 @@ import pandas as pd
 import uvicorn
 import requests
 import os
+import numpy as np
 
 app = FastAPI(title="Car Price Prediction API",
               description="Predict car price based on input features")
